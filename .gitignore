@@ -1,0 +1,27 @@
+# Compilación y artefactos de Maven
+target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Entornos y editores (VS Code, Eclipse, IntelliJ)
+.vscode/
+.project
+.classpath
+.settings/
+.idea/
+*.iml
+
+# Archivos del sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs y temporales
+*.log
+*.tmp
+mvnw.cmd
+
+# Credenciales y variables sensibles
+.env
+*.properties.local
