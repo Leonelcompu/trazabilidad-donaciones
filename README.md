@@ -26,6 +26,7 @@ El sistema adopta el patrón **Database-per-Service**, desacoplando los dominios
 ### Arquitectura de Microservicios
 ![Diagrama de Arquitectura](docs/diagrama-arquitectura.png)
 
+
  Avances - Semana 1 (29/10)
 * Inicialización del repositorio y configuración de Git en equipo.
 * Creación de las 5 bases de datos en Neon PostgreSQL.
