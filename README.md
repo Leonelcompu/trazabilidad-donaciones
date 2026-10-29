@@ -19,6 +19,13 @@ El sistema adopta el patrón **Database-per-Service**, desacoplando los dominios
 | trazabilidad-service | 8084 | trazabilidad_db | Pendiente |
 | solicitud-service | 8085 | solicitud_db | Pendiente |
 
+##Diagramas del Sistema
+### Modelo de Dominio y Clases
+![Diagrama de Clases](docs/diagrama-clases.png)
+
+### Arquitectura de Microservicios
+![Diagrama de Arquitectura](docs/diagrama-arquitectura.png)
+
  Avances - Semana 1 (29/10)
 * Inicialización del repositorio y configuración de Git en equipo.
 * Creación de las 5 bases de datos en Neon PostgreSQL.
