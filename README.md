@@ -13,7 +13,7 @@ El sistema adopta el patrón **Database-per-Service**, desacoplando los dominios
 | Microservicio | Puerto | Base de Datos (Neon) | Estado |
 | :--- | :--- | :--- | :--- |
 | API Gateway | 8080 | N/A | Pendiente |
-| donacion-service | 8081 | donacion_db | En desarrollo |
+| donacion-service | 8081 | donacion_db | Completado |
 | inventario-service | 8082 | inventario_db | Completado |
 | distribucion-service | 8083 | distribucion_db | Pendiente |
 | trazabilidad-service | 8084 | trazabilidad_db | Pendiente |
