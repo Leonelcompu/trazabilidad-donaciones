@@ -24,7 +24,7 @@ El sistema adopta el patrón **Database-per-Service**, desacoplando los dominios
 * Creación de las 5 bases de datos en Neon PostgreSQL.
 * Estructuración inicial y conexión de `donacion-service`.
 
-## Diagramas del Sistema
+## rDiagramas del Sistema
 ### Modelo de Dominio y Clases
 ![Diagrama de Clases](docs/diagrama-clases.png)
 
