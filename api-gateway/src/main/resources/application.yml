@@ -1,0 +1,45 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      routes:
+        # Microservicio de Donaciones
+        - id: donacion-service
+          uri: ${DONACION_SERVICE_URL:http://localhost:8081}
+          predicates:
+            - Path=/api/donaciones, /api/donaciones/**
+
+        # Microservicio de Inventario
+        - id: inventario-service
+          uri: ${INVENTARIO_SERVICE_URL:http://localhost:8082}
+          predicates:
+            - Path=/api/inventario, /api/inventario/**, /api/lotes, /api/lotes/**
+
+        # Microservicio de Distribución (Lucas)
+        - id: distribucion-service
+          uri: ${DISTRIBUCION_SERVICE_URL:http://localhost:8083}
+          predicates:
+            - Path=/api/distribuciones, /api/distribuciones/**
+
+        # Microservicio de Trazabilidad
+        - id: trazabilidad-service
+          uri: ${TRAZABILIDAD_SERVICE_URL:http://localhost:8084}
+          predicates:
+            - Path=/api/trazabilidad, /api/trazabilidad/**
+
+      # Configuración de CORS global
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "*"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
