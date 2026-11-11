@@ -16,7 +16,7 @@ El sistema adopta el patrón **Database-per-Service**, desacoplando los dominios
 | donacion-service | 8081 | donacion_db | Completado |
 | inventario-service | 8082 | inventario_db | Completado |
 | distribucion-service | 8083 | distribucion_db | Pendiente |
-| trazabilidad-service | 8084 | trazabilidad_db | Pendiente |
+| trazabilidad-service | 8084 | trazabilidad_db | Completado |
 | solicitud-service | 8085 | solicitud_db | Pendiente |
 
  Avances - Semana 1 (29/10)
