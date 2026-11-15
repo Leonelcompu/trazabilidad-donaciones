@@ -11,7 +11,7 @@ spring:
         - id: donacion-service
           uri: ${DONACION_SERVICE_URL:http://localhost:8081}
           predicates:
-            - Path=/api/donaciones, /api/donaciones/**
+            - Path=/api/donaciones, /api/donaciones/**, /api/donantes, /api/donantes/**
 
         # Microservicio de Inventario
         - id: inventario-service
