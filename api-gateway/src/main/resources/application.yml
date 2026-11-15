@@ -11,7 +11,7 @@ spring:
         - id: donacion-service
           uri: ${DONACION_SERVICE_URL:http://localhost:8081}
           predicates:
-            - Path=/api/donaciones, /api/donaciones/**, /api/donantes, /api/donantes/**, /api/donantes, /api/donantes/**
+            - Path=/api/donaciones, /api/donaciones/**, /api/donantes, /api/donantes/**
 
         # Microservicio de Inventario
         - id: inventario-service
@@ -19,11 +19,17 @@ spring:
           predicates:
             - Path=/api/inventario, /api/inventario/**, /api/lotes, /api/lotes/**
 
-        # Microservicio de Distribución (Lucas)
+        # Microservicio de Distribución
         - id: distribucion-service
           uri: ${DISTRIBUCION_SERVICE_URL:http://localhost:8083}
           predicates:
             - Path=/api/distribuciones, /api/distribuciones/**
+
+        # Microservicio de Solicitudes
+        - id: solicitud-service
+          uri: ${SOLICITUD_SERVICE_URL:http://localhost:8085}
+          predicates:
+            - Path=/api/solicitudes, /api/solicitudes/**
 
         # Microservicio de Trazabilidad
         - id: trazabilidad-service
