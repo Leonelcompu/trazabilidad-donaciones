@@ -7,37 +7,31 @@ spring:
   cloud:
     gateway:
       routes:
-        # Microservicio de Donaciones
         - id: donacion-service
           uri: ${DONACION_SERVICE_URL:http://localhost:8081}
           predicates:
             - Path=/api/donaciones, /api/donaciones/**, /api/donantes, /api/donantes/**
 
-        # Microservicio de Inventario
         - id: inventario-service
           uri: ${INVENTARIO_SERVICE_URL:http://localhost:8082}
           predicates:
             - Path=/api/inventario, /api/inventario/**, /api/lotes, /api/lotes/**
 
-        # Microservicio de Distribución
         - id: distribucion-service
           uri: ${DISTRIBUCION_SERVICE_URL:http://localhost:8083}
           predicates:
             - Path=/api/distribuciones, /api/distribuciones/**
 
-        # Microservicio de Solicitudes
         - id: solicitud-service
           uri: ${SOLICITUD_SERVICE_URL:http://localhost:8085}
           predicates:
             - Path=/api/solicitudes, /api/solicitudes/**
 
-        # Microservicio de Trazabilidad
         - id: trazabilidad-service
           uri: ${TRAZABILIDAD_SERVICE_URL:http://localhost:8084}
           predicates:
             - Path=/api/trazabilidad, /api/trazabilidad/**
 
-      # Configuración de CORS global
       globalcors:
         cors-configurations:
           '[/**]':
